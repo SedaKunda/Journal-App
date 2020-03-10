@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/addFolder"
+        android:title="@string/add_folder"
+        android:icon="@drawable/add_folder" />
+    <item android:id="@+id/addEntry"
+        android:title="@string/add_journal_entry"
+        android:icon="@drawable/add_note"/>
+    <item android:id="@+id/other"
+        android:title="@string/other"
+        android:icon="@drawable/other_random_image"/>
+</menu>

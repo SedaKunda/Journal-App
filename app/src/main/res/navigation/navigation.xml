@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/journal_entries_fragment">
+
+    <fragment
+        android:id="@+id/journal_entries_fragment"
+        android:name="com.zuhlke.upskilling.journal.journalEntry.list.JournalEntriesFragment"
+        tools:layout="@layout/fragment_all_journal_entries_list">
+        <action
+            android:id="@+id/action_journal_entries_fragment_to_journal_entry_item_fragment"
+            app:destination="@id/journal_entry_item_fragment" />
+        <action
+            android:id="@+id/action_journal_entries_fragment_to_foldersListFragment"
+            app:destination="@id/foldersListFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/journal_entry_item_fragment"
+        android:name="com.zuhlke.upskilling.journal.journalEntry.details.JournalEntryDetailsFragment"
+        tools:layout="@layout/fragment_journal_entry_item">
+        <argument
+            android:name="journalEntryId"
+            app:argType="integer" />
+        <argument
+            android:name="folderId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_journal_entry_item_fragment_to_journal_entries_fragment"
+            app:destination="@id/journal_entries_fragment"
+            app:popUpTo="@+id/journal_entries_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foldersListFragment"
+        android:name="com.zuhlke.upskilling.journal.folder.list.FoldersFragment"
+        tools:layout="@layout/fragment_folders_list">
+        <action
+            android:id="@+id/action_foldersListFragment_to_journal_entries_fragment"
+            app:destination="@id/journal_entries_fragment" />
+        <action
+            android:id="@+id/action_foldersListFragment_to_folderDetailsFragment"
+            app:destination="@id/folderDetailsFragment" />
+        <action
+            android:id="@+id/action_foldersListFragment_to_journal_entry_item_fragment"
+            app:destination="@id/journal_entry_item_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/folderDetailsFragment"
+        android:name="com.zuhlke.upskilling.journal.folder.details.FolderDetailsFragment"
+        tools:layout="@layout/fragment_folder_journal_entries_list">
+        <argument
+            android:name="folderId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_folderDetailsFragment_to_journal_entry_item_fragment"
+            app:destination="@id/journal_entry_item_fragment" />
+    </fragment>
+
+</navigation>

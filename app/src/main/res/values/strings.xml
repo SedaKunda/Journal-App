@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Journal</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="create_new_journal_entry">create new journal entry</string>
+    <string name="delete_entry">delete entry</string>
+    <string name="share_entry">share entry</string>
+    <string name="save_entry">save entry</string>
+    <string name="edit_title">edit title</string>
+    <string name="edit_contents">edit contents</string>
+    <string name="edit_folder_name">edit folder name</string>
+    <string name="move">Move</string>
+    <string name="journal_entries">journal entries</string>
+    <string name="create_new_folder">create new folder</string>
+    <plurals name="journals_count">
+        <item quantity="one">%d entry</item>
+        <item quantity="other">%d entries</item>
+        <item quantity="zero">empty</item>
+    </plurals>
+    <string name="all_folders">all folders</string>
+    <string name="folders">Folders</string>
+    <string name="folder_name_hint">Enter a folder name</string>
+    <string name="share">Share</string>
+    <string name="upload_attachment">Upload Attachment</string>
+    <string name="all_entries">ALL ENTRIES</string>
+    <string name="nothing_to_display">No journal entries to display</string>
+    <string name="add_folder">Add Folder</string>
+    <string name="add_journal_entry">Add Journal Entry</string>
+    <string name="other">Other</string>
+</resources>

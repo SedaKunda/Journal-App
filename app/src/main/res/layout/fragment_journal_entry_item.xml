@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/journal_entry_item_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryTextColor"
+        android:ems="10"
+        android:hint="@string/edit_title"
+        android:inputType="text"
+        android:labelFor="@id/title"
+        android:padding="8dp"
+        android:textColor="@color/secondaryTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/contents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <EditText
+        android:id="@+id/contents"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:autofillHints="contents"
+        android:hint="@string/edit_contents"
+        android:inputType="textMultiLine"
+        android:labelFor="@id/contents"
+        android:background="@color/white"
+        android:padding="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="This is some text This is some textThis is some textThis is some textThis is some textThis is some textThis is some textThis is some textThis is some text" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contents"
+        app:srcCompat="@drawable/plain_white_image_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>
